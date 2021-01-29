@@ -14,12 +14,23 @@ body {
 }
 
 /* Video Background */
-.video-background {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  width: 100vw;
-  height: auto;
+.video {
+  &-background {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: auto;
+  }
+
+  &-overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(255, 255, 255, 0.35);
+  }
 }
 
 video {
@@ -27,15 +38,6 @@ video {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-
-.video-overlay {
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100vh;
-  width: 100vw;
-  background: rgba(255, 255, 255, 0.35);
 }
 
 /* Container */
@@ -97,10 +99,10 @@ button {
   color: white;
   cursor: pointer;
   outline: none;
-}
 
-button:hover {
-  filter: brightness(110%);
+  &:hover {
+    filter: brightness(110%);
+  }
 }
 
 /* Countdown */
@@ -114,22 +116,22 @@ li {
   list-style-type: none;
   padding: 10px;
   text-transform: uppercase;
-}
 
-li span {
-  display: block;
-  font-size: 80px;
-  text-align: center;
+  & span {
+    display: block;
+    font-size: 80px;
+    text-align: center;
+  }
 }
 
 /* Complete */
 .complete {
   position: relative;
   top: 60px;
-}
 
-.complete-title {
-  animation: complete 4s infinite;
+  &-title {
+    animation: complete 4s infinite;
+  }
 }
 
 @keyframes complete {
@@ -199,9 +201,9 @@ li span {
 
   li {
     font-size: 15px;
-  }
 
-  li span {
-    font-size: 40px;
+    & span {
+      font-size: 40px;
+    }
   }
 }
